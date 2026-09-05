@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlowHits — Crie a música da sua torcida</title>
+    <meta name="description" content="Crie, organize, ouça e publique músicas da sua torcida no FlowHits." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=block" rel="stylesheet" />
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <style>
+      html, body, #root { min-height: 100%; margin: 0; }
+      .app-loader { min-height: 100vh; display: grid; place-items: center; overflow: hidden; position: relative; color: #0f172a; font-family: Arial, sans-serif; background: #ffffff; }
+      .app-loader-layers { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+      .app-loader-layers::before { content: ''; position: absolute; width: min(68vw, 760px); aspect-ratio: 1; top: 50%; left: 50%; border-radius: 50%; background: radial-gradient(circle, #0874f812 0%, transparent 68%); transform: translate(-50%, -50%); filter: blur(2px); animation: loader-glow 2.8s ease-in-out infinite; }
+      .app-loader-layers i { display: none; }
+      .app-loader-content { z-index: 1; display: grid; justify-items: center; gap: 14px; letter-spacing: .08em; }
+      .app-loader-logo { display: block; width: 168px; height: 168px; object-fit: cover; border-radius: 18px; }
+      .app-loader-content p { margin: 0; color: #64748b; font-size: 12px; letter-spacing: .03em; }
+      .app-loader-progress { width: 160px; height: 3px; overflow: hidden; border-radius: 99px; background: #e2e8f0; } .app-loader-progress i { display: block; width: 42%; height: 100%; background: #0874f8; animation: loader-progress 1.1s ease-in-out infinite; }
+      @keyframes loader-glow { 0%, 100% { opacity: .55; transform: translate(-50%, -50%) scale(.94); } 50% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); } } @keyframes loader-progress { from { transform: translateX(-120%); } to { transform: translateX(360%); } }
+      @media (prefers-reduced-motion: reduce) { .app-loader-layers::before, .app-loader-progress i { animation: none; } .app-loader-progress i { width: 100%; } }
+    </style>
+  </head>
+  <body>
+    <div id="root"><main class="app-loader" aria-label="Carregando FlowHits"><div class="app-loader-layers" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="app-loader-content"><img class="app-loader-logo" src="/LOGO%202.webp" alt="FlowHits"><p>Preparando seu estúdio</p><div class="app-loader-progress" aria-hidden="true"><i></i></div></div></main></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

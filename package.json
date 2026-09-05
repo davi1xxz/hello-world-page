@@ -1,0 +1,35 @@
+{
+  "name": "flowhits-1-0",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "npx --yes firebase-tools deploy --only hosting",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "verify:auth-page": "node scripts/check-auth-page.mjs https://flow-hits.web.app/entrar",
+    "verify:rls": "node scripts/verify-studio-rls.mjs",
+    "verify:admin": "node scripts/verify-admin-panel.mjs",
+    "verify:stripe": "node scripts/verify-stripe-payments.mjs",
+    "verify:deletion": "node scripts/verify-account-deletion.mjs",
+    "verify:reconcile": "node scripts/verify-reconciliation.mjs",
+    "verify:admin-sub": "node scripts/verify-admin-subscription-management.mjs",
+    "verify:notifications": "node scripts/verify-notifications-system.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.112.4",
+    "lucide-react": "^1.31.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.4",
+    "oxlint": "^1.75.0",
+    "postgres": "^3.4.9",
+    "vite": "^8.2.0"
+  }
+}
